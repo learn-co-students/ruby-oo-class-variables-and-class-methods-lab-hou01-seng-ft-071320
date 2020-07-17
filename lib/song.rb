@@ -26,7 +26,14 @@ attr_accessor :name, :artist, :genre
         @@genres.uniq
     end
     def self.genre_count
+        hash = Hash.new(0)
+        @@genres.each{|key| hash[key] += 1}
+        hash
     end
+
     def self.artist_count
+        hash = Hash.new(0)
+        @@artists.each{|key| hash[key] += 1}
+        hash
     end
 end
